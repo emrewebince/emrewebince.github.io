@@ -11,8 +11,8 @@ body {
 .container {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.65)), url(../images/indexBackground.jpg);
-    /* Backgorund Photo by Shane Rounce on Unsplash*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/indexBackground.jpg);
+    /* Backgorund Photo by Oziel Gómez on Unsplash*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -74,7 +74,6 @@ body {
     width: 100vw;
     height: 80%;
     position: relative;
-    justify-content: center;
 }
 
 
@@ -85,9 +84,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: context-menu;
 
     /* Animation Starts Here */
@@ -96,38 +92,64 @@ body {
 
 @keyframes mymove {
     from {
-        opacity:0;
+        opacity: 0;
         top: 60%;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
         top: 50%;
     }
 }
+
 /* Animation Ends Here */
+
 
 #pp {
     width: 200px;
     height: auto;
     border-radius: 50%;
     border-style: solid;
-    border-width: 0.3rem;
+    border-width: 0.2rem;
     border-color: #ddd;
+    display: block;
+    margin: 0 auto;
 }
 
 .text {
-    text-align: left;
-    padding-top: 20px;
-    vertical-align: middle;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.1rem;
+    display: block;
+    width: max-content;
+    margin: 2rem auto 0 auto;
+    font-weight: 300;
 }
 
 .st {
     color: #ddd;
-    padding-left: 3rem;
-    display: block;
+    text-align: left;
 }
+
+.text .nameTag {
+    font-size: 2.5rem;
+}
+
+p span::before
+{
+    content: 'Civil Engineer';
+    animation: titleAnimation infinite 6s;
+    animation-delay: 2s;
+}
+
+@keyframes titleAnimation {
+    0%{
+        content: 'Civil Engineer';
+    }
+    50%{
+        content: 'Front-End Developer';
+    }
+}
+
 /* Footer Starts Here */
 footer {
     color: #999;
