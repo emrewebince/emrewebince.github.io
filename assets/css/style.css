@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html,
@@ -19,55 +20,6 @@ body {
     background-blend-mode: multiply;
 }
 
-/* Header Content Starts Here */
-
-.menu {
-    width: 60vw;
-    height: 10vh;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.menu ul {
-    list-style-type: none;
-    padding-top: 6vh;
-    float: right;
-}
-
-.menu li {
-    display: inline;
-    margin-left: 1vw;
-}
-
-.menu a.cPage {
-    text-decoration: none;
-    color: #fff;
-    padding: 9px 1vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.menu a.cPage:hover {
-    color: #fff;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-    cursor: context-menu;
-}
-
-.menu a.nPage {
-    text-decoration: none;
-    color: #aaa;
-    padding: 9px 1vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.menu a.nPage:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-    color: #fff;
-    border-radius: 20px 5px;
-}
-
-
-/* Header Content Ends Here */
 /* Section Content Starts Here */
 
 .section {
@@ -75,7 +27,6 @@ body {
     height: 80%;
     position: relative;
 }
-
 
 .showcase {
     padding: 0;

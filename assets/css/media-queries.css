@@ -1,0 +1,23 @@
+@media all and (min-width: 769px) {
+    .handheld-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 768px) {
+    .menu ul {
+        float: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .handheld-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 469px) {
+    .normal-menu {
+        display: none;
+    }
+}
