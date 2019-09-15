@@ -1,37 +1,38 @@
 /* normal-menu Starts Here */
 
 .normal-menu {
-    width: 60vw;
+    width: 100vw;
     height: 10vh;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.normal-menu ul {
+.normal-menu>div {
+    float: right;
+    margin-right: 10vw;
+}
+
+.normal-menu>div>ul {
     list-style-type: none;
     padding-top: 6vh;
-    float: right;
 }
 
-.normal-menu li {
+.normal-menu>div>ul>li {
+    margin-left: 3rem;
     display: inline;
-    margin-left: 1vw;
 }
 
-.normal-menu a.cPage {
+.normal-menu>div>ul>li .cPage {
     text-decoration: none;
     color: #fff;
-    padding: 9px 1vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.normal-menu a.cPage:hover {
+.normal-menu>div>ul>li .cPage:hover {
     color: #fff;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     cursor: context-menu;
 }
 
-.normal-menu a.nPage {
+.normal-menu>div>ul>li .nPage {
     text-decoration: none;
     color: #aaa;
     padding: 9px 1vw;
@@ -39,7 +40,7 @@
 
 }
 
-.normal-menu a.nPage:hover {
+.normal-menu>div>ul>li .nPage:hover {
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     color: #fff;
     border-radius: 20px 5px;
@@ -52,58 +53,59 @@
 .handheld-menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 1;
 }
 
 /* Checkbox Starts Here */
 
-.handheld-menu #toggler {
+.handheld-menu .toggler {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    height: 50px;
-    width: 50px;
+    top: 15px;
+    left: 15px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
     opacity: 0;
-    z-index: 2;
+    z-index: 4;
 }
 
 /* Checkbox Ends Here */
 /* Hamburger lines Starts Here */
 
-.handheld-menu #hamburger {
+.handheld-menu .hamburger {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    height: 40px;
-    width: 40px;
+    top: 15px;
+    left: 15px;
+    height: 30px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3;
 }
 
-.handheld-menu #hamburger>div {
+.handheld-menu .hamburger>div {
     position: relative;
-    height: 3px;
+    height: 2px;
     width: 100%;
     background-color: #ddd;
     transition: all 0.4s ease;
 }
 
-.handheld-menu #hamburger>div::before {
+.handheld-menu .hamburger>div::before {
     position: absolute;
     content: '';
-    height: 3px;
+    height: 2px;
     width: 100%;
     background-color: inherit;
     top: -10px;
 }
 
-.handheld-menu #hamburger>div::after {
+.handheld-menu .hamburger>div::after {
     position: absolute;
     content: '';
-    height: 3px;
+    height: 2px;
     width: 100%;
     background-color: inherit;
     top: 10px;
@@ -112,12 +114,12 @@
 /* Hamburger lines Ends Here */
 /* Hamburger to X Animation Starts Here */
 
-.handheld-menu #toggler:checked+#hamburger>div {
+.handheld-menu .toggler:checked+.hamburger>div {
     transform: rotate(-45deg);
 }
 
-.handheld-menu #toggler:checked+#hamburger>div::before,
-.handheld-menu #toggler:checked+#hamburger>div::after {
+.handheld-menu .toggler:checked+.hamburger>div::before,
+.handheld-menu .toggler:checked+.hamburger>div::after {
     top: 0;
     transform: rotate(90deg);
 }
@@ -125,36 +127,68 @@
 /*  Hamburger to X Animation Ends Here */
 /* Menu Showup Starts Here */
 
+.handheld-menu .toggler:checked~.menu {
+    visibility: visible;
+}
 
+.handheld-menu .toggler:checked~.menu>div {
+    transform: translateY(0);
+    transition-duration: 0.5s;
+}
+
+.handheld-menu .toggler:checked~.menu>div>div {
+    opacity: 1;
+    transition: all 0.4s ease 0.35s;
+}
 
 /*  Menu Showup Ends Here */
 /* Menu Properties Starts Here */
 
 .handheld-menu .menu {
     position: fixed;
-    top: 70px;
-    right: 10px;
+
+    left: 0;
+    right: 0;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
-.handheld-menu .menu ul li {
+.handheld-menu .menu>div {
+    background: #000;
+    padding-top: 60px;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    align-items: left;
+    justify-content: left;
+    transform: translateY(-40rem);
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.handheld-menu .menu>div>div {
+    text-align: left;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.handheld-menu .menu>div>div>div {
+    width: 80vw;
+    margin: 0 10vw 0 10vw;
+}
+
+.handheld-menu .menu>div>div>div>ul>li {
     list-style: none;
     color: #ddd;
-    padding: 1rem 2rem;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    font-size: 1.2rem;
+    padding: 1rem 0 0.7rem 0;
+    border-bottom: 1px solid #444;
 }
 
-.handheld-menu .menu ul li a {
+.handheld-menu .menu>div>div>div>ul>li>a {
     color: inherit;
     text-decoration: none;
+
 }
 
 /* Menu Properties Ends Here */

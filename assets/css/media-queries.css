@@ -5,10 +5,18 @@
 }
 
 @media screen and (min-width: 470px) and (max-width: 768px) {
-    .menu ul {
+    .normal-menu>div {
         float: none;
+        margin: 0;
+    }
+
+    .menu ul {
         display: flex;
         justify-content: center;
+    }
+
+    .normal-menu>div>ul>li {
+        margin: 0 1.5rem;
     }
 
     .handheld-menu {
@@ -17,6 +25,18 @@
 }
 
 @media screen and (min-width: 0) and (max-width: 469px) {
+    .section {
+        height: 90%;
+    }
+
+    .st {
+        font-size: 0.9rem;
+    }
+
+    .text .nameTag {
+        font-size: 1.7rem;
+    }
+
     .normal-menu {
         display: none;
     }

@@ -103,18 +103,20 @@ p span::before
 
 /* Footer Starts Here */
 footer {
-    color: #999;
-    width: 200px;
+    color: #aaa;
+    width: 100vw;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-
     align-items: center;
+    justify-content: center;
 }
 
 
-#smIcons {
+.smIcons {
     width: auto;
     height: 20px;
-    margin-right: 0.6rem;
+    margin: 0 12px 0 0;
+}
+
+#copy {
+    font-size: 0.7rem;
 }
