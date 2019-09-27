@@ -110,7 +110,6 @@ footer {
     justify-content: center;
 }
 
-
 .smIcons {
     width: auto;
     height: 20px;
@@ -118,5 +117,8 @@ footer {
 }
 
 #copy {
+    margin-top: -0.1rem;
+    margin-left: 5px;
     font-size: 0.7rem;
 }
+/* Footer Ends Here */
