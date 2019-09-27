@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 200vh;
+}
+
+/* Sticky Header Starts Here */
+.sticky-header {
+    background-color: #fafafa;
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    color: #676767;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sticky-header>div {
+    width: 80vw;
+    max-width: 960px;
+    margin: 0 auto;
+    line-height: 3rem;
+}
+
+.sticky-header>div a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.sticky-header>div>div {
+    float: left;
+}
+
+.sticky-header>div>div>a {
+    color: #333;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.sticky-header>div>div>a:hover {
+    color: #000;
+}
+
+.sticky-header>div>nav {
+    float: right;
+}
+
+.sticky-header>div>nav>ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.sticky-header>div>nav>ul>li {
+    display: inline;
+    padding: 0 1.3rem;
+    letter-spacing: 0.2px;
+}
+
+.sticky-header>div>nav>ul>li>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sticky-header>div>nav>ul>li .cPage {
+    color: #000;
+}
+
+.sticky-header>div>nav>ul>li .nPage {
+    transition: color 0.3s ease-out;
+}
+
+.sticky-header>div>nav>ul>li .nPage:hover {
+    color: #000;
+}
+
+/* Sticky Header Ends Here */
+/* Container Starts Here */
+
+.container {
+    width: 80rem;
+    max-width: 960px;
+    padding-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .column {
+    float: left;
+}
+
+/* Container Ends Here */
